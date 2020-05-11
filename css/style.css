@@ -1,0 +1,41 @@
+body {
+    background-image: url("https://cdn.spacetelescope.org/archives/images/screen/heic1107a.jpg");
+    /* background-size: auto 100vh; */
+    background-size: cover;
+    font-family: Arial;
+    font-size: 16px;
+    height: 100vh;
+    margin: 0;
+}
+
+.menu {
+    background: black;
+    margin: 0;
+    padding: 0.5em;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+a {
+    color: lavenderblush;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-title,
+.site-subtitle {
+    color: antiquewhite;
+    text-align: center;
+}
+
