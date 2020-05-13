@@ -7,32 +7,13 @@
 html {
     background-image: url("https://cdn.spacetelescope.org/archives/images/screen/heic1107a.jpg");
     background-size: cover;
-    font-family: "Share Tech Mono", Arial, monospace;
+    font-family: "Roboto", sans-serif;
+
     font-size: 14px;
 }
 
 body {
     background: rgba(0, 0, 0, 0.7);
-}
-
-/* se a tela tiver pelo - 450px vai carregar estes estilos */
-@media (min-width: 450px) {
-    html {
-        font-size: 16px;
-    }
-    .portfolio {
-        display: flex;
-        justify-content: center;
-        padding: 2em;
-    }
-
-    .container-item-portfolio {
-        height: 15.3em;
-        padding: 1em;
-        padding-bottom: 0;
-        width: 20.7em;
-        /* border: RGB(216, 191, 216, .1) solid .4em; */
-    }
 }
 
 header {
@@ -41,6 +22,7 @@ header {
     height: 100vh;
     justify-content: center;
     position: relative;
+    font-family: "Share Tech Mono", Arial, monospace;
 }
 
 .menu {
@@ -59,8 +41,8 @@ header {
 .menu a {
     color: antiquewhite;
     display: block;
-    font-size: 1.4em;
-    padding: 1em;
+    font-size: 1.2em;
+    padding: 0.5em;
     text-decoration: none;
 }
 
@@ -100,11 +82,13 @@ header {
 
 .section {
     color: antiquewhite;
+    font-family: "Share Tech Mono", Arial, monospace;
 }
 
 .section h2 {
     margin-bottom: 1.5em;
     text-align: center;
+    font-size: 2em;
 }
 
 .portfolio {
@@ -128,3 +112,43 @@ header {
     height: 12em;
     width: 18em;
 }
+
+/* se a tela tiver pelo - 450px vai carregar estes estilos */
+
+@media (min-width: 450px) {
+    html {
+        font-size: 16px;
+    }
+
+    .menu a {
+        padding: 1em;
+        font-size: 1.5em;
+    }
+
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        padding: 2em;
+    }
+
+    .container-item-portfolio {
+        height: 15.3em;
+        padding: 1em;
+        padding-bottom: 0;
+        width: 20.7em;
+        /* border: RGB(216, 191, 216, .1) solid .4em; */
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1100px){
+    html {
+        font-size: 30px;
+    }
+
+    .img-portfolio {
+        height: 10em;
+        width: 14em;
+    }
+}
+
+
