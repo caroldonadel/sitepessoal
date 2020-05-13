@@ -8,17 +8,30 @@ html {
     background-image: url("https://cdn.spacetelescope.org/archives/images/screen/heic1107a.jpg");
     background-size: cover;
     font-family: "Share Tech Mono", Arial, monospace;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 body {
     background: rgba(0, 0, 0, 0.7);
-    /* height: 100vh; */
 }
 
-/* se a tela tiver pelo - 400px vai carregar estes estilos */
-@media (min-width: 400px) {
+/* se a tela tiver pelo - 450px vai carregar estes estilos */
+@media (min-width: 450px) {
+    html {
+        font-size: 16px;
+    }
+    .portfolio {
+        display: flex;
+        padding: 2em;
+    }
 
+    .container-item-portfolio {
+        height: 15.3em;
+        padding: 1em;
+        padding-bottom: 0;
+        width: 20.7em;
+        /* border: RGB(216, 191, 216, .1) solid .4em; */
+    }
 }
 
 header {
@@ -51,8 +64,8 @@ header {
 }
 
 .menu a:hover {
-    transform: scale(1.5);
     text-shadow: -2px 0px 14px rgba(150, 74, 207, 1);
+    transform: scale(1.5);
 }
 
 .menu li {
@@ -89,20 +102,16 @@ header {
 }
 
 .section h2 {
-    text-align: center;
     margin-bottom: 1.5em;
+    text-align: center;
 }
 
 .portfolio {
-    display: flex;
-    justify-content: center;
-    padding: 2em;
     text-align: center;
 }
 
 .container-item-portfolio {
     height: 15.3em;
-    width: 20.7em;
     padding: 1em;
     padding-bottom: 0;
     /* border: RGB(216, 191, 216, .1) solid .4em; */
@@ -113,9 +122,8 @@ header {
 }
 
 .img-portfolio {
+    border-radius: 0.4em;
+    box-shadow: 0px 0px 90px -20px #483d8b;
     height: 12em;
     width: 18em;
-    box-shadow: 0px 0px 90px -20px #483d8b;
-    border-radius: 0.4em;
 }
-
