@@ -1,2 +1,2 @@
 # sitepessoal
-Site utilizando HTMLe CSS, feito durante a imersão CSS oferecida pela Alura
+Site utilizando HTML e CSS, feito durante a imersão CSS oferecida pela Alura
