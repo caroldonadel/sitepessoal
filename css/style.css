@@ -166,25 +166,27 @@ header {
     transform: rotate(90deg) scale(1.5);
 }
 
-.footer {
-    margin: 0;
-    position: fixed;
-    left: 0;
-    height: 100vh;
-    width: 5em;
-}
-
-.footer a {
+.contato {
+    align-items: center;
     color: antiquewhite;
-    display: block;
+    display: flex;
+    /* flex-direction: column; */
     font-family: "Share Tech Mono", Arial, monospace;
-    font-size: 1em;
-    padding: 1em;
-    text-decoration: none;
+    justify-content: center;
+    padding: 2em 0 1.5em 0;
+    width: 100%;
 }
 
-.footer li {
-    list-style: none;
+.contato h2 {
+    font-size: 1.5em;
+        margin-right: 1em;
+    text-align: center;
+}
+
+.contato a {
+    color: antiquewhite;
+    font-size: 2em;
+    text-decoration: none;
 }
 
 /* .github {
@@ -346,7 +348,7 @@ header {
     }
 
     .section {
-        min-height: 100vh;
+        min-height: 80vh;
     }
 
     .section .titulo-projetos {
@@ -368,17 +370,14 @@ header {
     }
 
     .img-atividades {
-        height: 13em;
+        height: 10em;
         width: 15em;
     }
 
-    .contato {
-
-    }
-
-    .contato h2 {
-
-    }
+        /* .contato h2 {
+        padding: 2em 1.5em 1em 1.5em;
+        margin: 0.5em 0 0.5em 0;
+    } */
 }
 
 @media (min-height: 1000px) and (min-width: 1000px) {
