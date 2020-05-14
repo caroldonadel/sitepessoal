@@ -83,6 +83,7 @@ header {
     color: antiquewhite;
     display: inline-block;
     font-family: "Share Tech Mono", Arial, monospace;
+    position: relative;
     min-height: 100vh;
     width: 100%;
 }
@@ -151,9 +152,11 @@ header {
 
 .simbolo-indicador-projetos {
     color: antiquewhite;
-    display: block;
+    display: inline-block;
     font-size: 3em;
+    left: 13.5em;
     margin-top: 2em;
+    position: absolute;
     text-align: center;
     text-decoration: none;
     transform: rotate(90deg);
