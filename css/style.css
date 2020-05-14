@@ -80,9 +80,12 @@ header {
 }
 
 .section {
+    align-items: center;
     color: antiquewhite;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     font-family: "Share Tech Mono", Arial, monospace;
+    justify-content: center;
     position: relative;
     min-height: 100vh;
     width: 100%;
@@ -151,13 +154,10 @@ header {
 }
 
 .simbolo-indicador-projetos {
+    bottom: 2em;
     color: antiquewhite;
     display: inline-block;
     font-size: 3em;
-    left: 13.5em;
-    margin-top: 2em;
-    position: absolute;
-    text-align: center;
     text-decoration: none;
     transform: rotate(90deg);
 }
@@ -398,7 +398,7 @@ header {
 
     .section {
         color: antiquewhite;
-        display: inline-block;
+        display: flex;
         font-family: "Share Tech Mono", Arial, monospace;
         min-height: 100vh;
         width: 100%;
