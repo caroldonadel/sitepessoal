@@ -1,28 +1,28 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
     background-image: url("https://cdn.spacetelescope.org/archives/images/screen/heic1107a.jpg");
     background-size: cover;
     font-family: "Roboto", sans-serif;
-
-    font-size: 14px;
+    font-size: 12px;
 }
 
 body {
     background: rgba(0, 0, 0, 0.7);
+    position: relative;
 }
 
 header {
     align-items: center;
     display: flex;
+    font-family: "Share Tech Mono", Arial, monospace;
     height: 100vh;
     justify-content: center;
     position: relative;
-    font-family: "Share Tech Mono", Arial, monospace;
 }
 
 .menu {
@@ -41,8 +41,8 @@ header {
 .menu a {
     color: antiquewhite;
     display: block;
-    font-size: 1.2em;
-    padding: 0.5em;
+    font-size: 1em;
+    padding: 1em;
     text-decoration: none;
 }
 
@@ -67,88 +67,337 @@ header {
 }
 
 .simbolo-indicador {
-    bottom: 0;
+    bottom: 2em;
     color: antiquewhite;
     font-size: 3em;
-    padding: 1em;
     position: absolute;
     text-decoration: none;
     transform: rotate(90deg);
 }
 
-.simbolo:hover {
+.simbolo-indicador:hover {
     transform: rotate(90deg) scale(1.5);
 }
 
 .section {
     color: antiquewhite;
+    display: inline-block;
     font-family: "Share Tech Mono", Arial, monospace;
+    min-height: 100vh;
+    width: 100%;
 }
 
-.section h2 {
-    margin-bottom: 1.5em;
+.section .titulo-projetos {
+    margin: 1.5em 0 0.5em 0;
+    padding: 2em 1.5em 1.5em 1.5em;
     text-align: center;
     font-size: 2em;
 }
 
 .portfolio {
+    display: grid;
+    justify-content: center;
     text-align: center;
-}
-
-.container-item-portfolio {
-    height: 15.3em;
-    padding: 1em;
-    padding-bottom: 0;
-    /* border: RGB(216, 191, 216, .1) solid .4em; */
-}
-
-.container-item-portfolio:hover {
-    transform: scale(1.1);
 }
 
 .img-portfolio {
     border-radius: 0.4em;
     box-shadow: 0px 0px 90px -20px #483d8b;
+    filter: brightness(0.8);
     height: 12em;
+    object-fit: cover;
+    object-position: left;
     width: 18em;
 }
 
-/* se a tela tiver pelo - 450px vai carregar estes estilos */
+.img-portfolio:hover {
+    filter: brightness(1);
+    transform: scale(1.1);
+}
 
-@media (min-width: 450px) {
+.section .titulo-atividades {
+    font-size: 2em;
+    margin: 1em 0 0 0;
+    padding: 1.5em 1.5em 0.5em 1.5em;
+    text-align: center;
+}
+
+.atividades {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(1, 14em);
+    justify-content: center;
+    text-align: center;
+}
+
+.img-atividades {
+    border-radius: 0.4em;
+    box-shadow: 0px 0px 90px -20px #483d8b;
+    filter: brightness(0.8);
+    height: 6em;
+    object-fit: cover;
+    object-position: left;
+    width: 12em;
+}
+
+.img-atividades:hover {
+    filter: brightness(1);
+    transform: scale(1.1);
+}
+
+.legenda {
+    font-size: 1.1em;
+}
+
+.simbolo-indicador-projetos {
+    color: antiquewhite;
+    display: block;
+    font-size: 3em;
+    margin-top: 2em;
+    text-align: center;
+    text-decoration: none;
+    transform: rotate(90deg);
+}
+
+.simbolo-indicador-projetos:hover {
+    transform: rotate(90deg) scale(1.5);
+}
+
+.footer {
+    margin: 0;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    width: 5em;
+}
+
+.footer a {
+    color: antiquewhite;
+    display: block;
+    font-family: "Share Tech Mono", Arial, monospace;
+    font-size: 1em;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.footer li {
+    list-style: none;
+}
+
+/* .github {
+    background-image: url(../img/github.png);
+    background-repeat: no-repeat, repeat;
+}
+
+.instagram {
+    background-image: url(../img/ig.png);
+    background-repeat: no-repeat, repeat;
+}
+
+.linkedin {
+    background-image: url(../img/linkedin.png);
+    background-repeat: no-repeat, repeat;
+} */
+
+/* se a tela tiver pelo - 400px vai carregar estes estilos */
+
+@media (max-width: 350px) {
+    html {
+        font-size: 12px;
+    }
+
+    .section {
+        min-height: 100vh;
+    }
+
+    .section .titulo-projetos {
+        padding: 2em 1.5em 0.3em 1.5em;
+        margin: 0.8em 0 0.5em 0;
+    }
+
+    .portfolio {
+        display: grid;
+        gap: 1em;
+    }
+
+    .section .titulo-atividades {
+        padding: 0em 1.5em 0.8em 1.5em;
+        margin: 2em 0 0.5em 0;
+    }
+
+    .simbolo-indicador-projetos {
+        margin-top: 2em;
+    }
+
+    .img-atividades {
+        height: 6em;
+        width: 14em;
+    }
+}
+
+@media (min-width: 400px) {
+    html {
+        font-size: 14px;
+    }
+    .menu a {
+        font-size: 1.2em;
+    }
+
+    .section {
+        min-height: 100vh;
+    }
+
+    .portfolio {
+        display: grid;
+        gap: 1em;
+    }
+
+    .atividades {
+        gap: 0.5em;
+    }
+
+    .img-atividades {
+        height: 8em;
+        width: 12em;
+    }
+}
+
+@media (min-width: 600px) {
     html {
         font-size: 16px;
     }
 
     .menu a {
-        padding: 1em;
         font-size: 1.5em;
     }
 
-    .portfolio {
-        display: flex;
-        justify-content: center;
-        padding: 2em;
-    }
-
-    .container-item-portfolio {
-        height: 15.3em;
-        padding: 1em;
-        padding-bottom: 0;
-        width: 20.7em;
-        /* border: RGB(216, 191, 216, .1) solid .4em; */
-    }
-}
-
-@media (min-width: 1000px) and (max-width: 1100px){
-    html {
-        font-size: 30px;
+    .section .titulo-projetos {
+        padding: 2em 1.5em 2em 1.5em;
+        margin: 2.5em 0 0.5em 0;
     }
 
     .img-portfolio {
-        height: 10em;
-        width: 14em;
+        height: 16em;
+        width: 18em;
+    }
+
+    .simbolo-indicador-projetos {
+        margin-top: 1em;
+    }
+
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, 18em);
+    }
+
+    .section .titulo-atividades {
+        padding: 2em 1.5em 2em 1.5em;
+        margin: 1.5em 0 0.5em 0;
+    }
+
+    .atividades {
+        display: grid;
+        gap: 2em;
+        grid-template-columns: repeat(2, 16em);
+    }
+
+    .img-atividades {
+        height: 14em;
+        width: 16em;
     }
 }
 
+/* @media (min-width: 800px) {
+    html {
+        font-size: 18px;
+    }
 
+    .menu a {
+        font-size: 1.2em;
+    }
+
+    .section {
+    
+    min-height: 100vh;
+}
+
+    .section .titulo-projetos {
+        padding: 2em 1.5em 1em 1.5em;
+        margin: 1.5em 0 0.5em 0;
+    }
+
+    .section .titulo-atividades {
+        padding: 2em 1.5em 1em 1.5em;
+        margin: 1em 0 0.5em 0;
+    }
+} */
+
+/* breakpoint */
+@media (min-width: 1000px) {
+    html {
+        font-size: 16px;
+    }
+
+    .menu a {
+        font-size: 1.2em;
+    }
+
+    .section {
+        min-height: 100vh;
+    }
+
+    .section .titulo-projetos {
+        padding: 2em 1.5em 1em 1.5em;
+        margin: 0.5em 0 0.5em 0;
+    }
+
+    .portfolio {
+        gap: 3em;
+    }
+
+    .section .titulo-atividades {
+        padding: 2em 1.5em 0em 1.5em;
+        margin: 0.5em 0 0.5em 0;
+    }
+
+    .atividades {
+        gap: 1em;
+    }
+
+    .img-atividades {
+        height: 13em;
+        width: 15em;
+    }
+}
+
+@media (min-height: 1000px) and (min-width: 1000px) {
+    html {
+        font-size: 20px;
+    }
+
+    .menu a {
+        font-size: 2em;
+    }
+
+    .section {
+        min-height: 100vh;
+    }
+
+    .section .titulo-projetos {
+        padding: 2em 1.5em 1.5em 1.5em;
+        margin: 2.5em 0 0.5em 0;
+    }
+
+    .section .titulo-atividades {
+        padding: 2em 1.5em 1em 1.5em;
+        margin: 2.5em 0 0.5em 0;
+    }
+
+    .section {
+        color: antiquewhite;
+        display: inline-block;
+        font-family: "Share Tech Mono", Arial, monospace;
+        min-height: 100vh;
+        width: 100%;
+    }
+}
