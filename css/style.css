@@ -31,6 +31,7 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 999;
 }
 
 .menu ul {
@@ -44,8 +45,10 @@ header {
     font-size: 1em;
     padding: 1em;
     text-decoration: none;
+    transition: transform 500ms;
 }
 
+.contato a:hover,
 .menu a:hover {
     text-shadow: -2px 0px 14px rgba(150, 74, 207, 1);
     transform: scale(1.5);
@@ -53,6 +56,23 @@ header {
 
 .menu li {
     list-style: none;
+}
+
+.titulos {
+    transform: scale(.2) translateY(50vh);
+    opacity: 0;
+    animation: 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 .site-title,
@@ -75,7 +95,10 @@ header {
     transform: rotate(90deg);
 }
 
-.simbolo-indicador:hover {
+.simbolo-indicador:active,
+.simbolo-indicador:hover,
+.simbolo-indicador-projetos:active,
+.simbolo-indicador-projetos:hover {
     transform: rotate(90deg) scale(1.5);
 }
 
@@ -87,7 +110,7 @@ header {
     font-family: "Share Tech Mono", Arial, monospace;
     justify-content: center;
     position: relative;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     width: 100%;
 }
 
@@ -114,7 +137,10 @@ header {
     width: 18em;
 }
 
-.img-portfolio:hover {
+.img-portfolio:active,
+.img-portfolio:hover,
+.img-atividades:active,
+.img-atividades:hover {
     filter: brightness(1);
     transform: scale(1.1);
 }
@@ -144,11 +170,6 @@ header {
     width: 12em;
 }
 
-.img-atividades:hover {
-    filter: brightness(1);
-    transform: scale(1.1);
-}
-
 .legenda {
     font-size: 1.1em;
 }
@@ -160,10 +181,6 @@ header {
     font-size: 3em;
     text-decoration: none;
     transform: rotate(90deg);
-}
-
-.simbolo-indicador-projetos:hover {
-    transform: rotate(90deg) scale(1.5);
 }
 
 .contato {
@@ -179,7 +196,7 @@ header {
 
 .contato h2 {
     font-size: 1.5em;
-        margin-right: 1em;
+    margin-right: 1em;
     text-align: center;
 }
 
@@ -189,31 +206,15 @@ header {
     text-decoration: none;
 }
 
-/* .github {
-    background-image: url(../img/github.png);
-    background-repeat: no-repeat, repeat;
-}
-
-.instagram {
-    background-image: url(../img/ig.png);
-    background-repeat: no-repeat, repeat;
-}
-
-.linkedin {
-    background-image: url(../img/linkedin.png);
-    background-repeat: no-repeat, repeat;
-} */
-
-/* se a tela tiver pelo - 400px vai carregar estes estilos */
-
 @media (max-width: 350px) {
     html {
         font-size: 12px;
     }
 
-    .section {
+    /* .section {
         min-height: 100vh;
-    }
+    } */
+
 
     .section .titulo-projetos {
         padding: 2em 1.5em 0.3em 1.5em;
@@ -223,6 +224,14 @@ header {
     .portfolio {
         display: grid;
         gap: 1em;
+    }
+
+    .simbolo-indicador-projetos {
+    padding: 1em 0;
+}
+
+    .atividades{
+        gap: .3em;
     }
 
     .section .titulo-atividades {
@@ -248,9 +257,9 @@ header {
         font-size: 1.2em;
     }
 
-    .section {
+    /* .section {
         min-height: 100vh;
-    }
+    } */
 
     .portfolio {
         display: grid;
@@ -265,6 +274,10 @@ header {
         height: 8em;
         width: 12em;
     }
+
+    .contato {
+    padding: .6em 0 1.5em 0;
+}
 }
 
 @media (min-width: 600px) {
@@ -312,31 +325,6 @@ header {
     }
 }
 
-/* @media (min-width: 800px) {
-    html {
-        font-size: 18px;
-    }
-
-    .menu a {
-        font-size: 1.2em;
-    }
-
-    .section {
-    
-    min-height: 100vh;
-}
-
-    .section .titulo-projetos {
-        padding: 2em 1.5em 1em 1.5em;
-        margin: 1.5em 0 0.5em 0;
-    }
-
-    .section .titulo-atividades {
-        padding: 2em 1.5em 1em 1.5em;
-        margin: 1em 0 0.5em 0;
-    }
-} */
-
 /* breakpoint */
 @media (min-width: 1000px) {
     html {
@@ -347,9 +335,9 @@ header {
         font-size: 1.2em;
     }
 
-    .section {
+    /* .section {
         min-height: 80vh;
-    }
+    } */
 
     .section .titulo-projetos {
         padding: 2em 1.5em 1em 1.5em;
@@ -374,10 +362,10 @@ header {
         width: 15em;
     }
 
-        /* .contato h2 {
-        padding: 2em 1.5em 1em 1.5em;
-        margin: 0.5em 0 0.5em 0;
-    } */
+    .contato {
+    padding: 1em 0 1.5em 0;
+}
+
 }
 
 @media (min-height: 1000px) and (min-width: 1000px) {
@@ -389,11 +377,7 @@ header {
         font-size: 2em;
     }
 
-    .section {
-        min-height: 100vh;
-    }
-
-    .section .titulo-projetos {
+        .section .titulo-projetos {
         padding: 2em 1.5em 1.5em 1.5em;
         margin: 2.5em 0 0.5em 0;
     }
@@ -407,7 +391,11 @@ header {
         color: antiquewhite;
         display: flex;
         font-family: "Share Tech Mono", Arial, monospace;
-        min-height: 100vh;
+        min-height: 90vh;
         width: 100%;
     }
+
+     .contato {
+    padding: 0em 0 0.5em 0;
+}
 }
