@@ -6,7 +6,8 @@
 
 html {
     background-image: url("https://cdn.spacetelescope.org/archives/images/screen/heic1107a.jpg");
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
 }
@@ -329,7 +330,6 @@ header {
 @media (min-width: 1000px) {
     html {
         font-size: 16px;
-            background-size: cover;
     }
 
     .menu a {
@@ -372,7 +372,6 @@ header {
 @media (min-height: 1000px) and (min-width: 1000px) {
     html {
         font-size: 20px;
-            background-size: contain;
     }
 
     .menu a {
