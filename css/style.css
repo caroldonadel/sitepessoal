@@ -92,8 +92,8 @@ header {
 }
 
 .section .titulo-projetos {
-    margin: 1.5em 0 0.5em 0;
-    padding: 2em 1.5em 1.5em 1.5em;
+    margin: 0 0 0.5em 0;
+    padding: 2em 1.5em 0.5em 1.5em;
     text-align: center;
     font-size: 2em;
 }
@@ -370,6 +370,14 @@ header {
     .img-atividades {
         height: 13em;
         width: 15em;
+    }
+
+    .contato {
+
+    }
+
+    .contato h2 {
+
     }
 }
 
