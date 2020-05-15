@@ -8,8 +8,8 @@ html {
     background-image: url("https://cdn.spacetelescope.org/archives/images/screen/heic1107a.jpg");
     background-position: center;
     background-size: cover;
-    font-family: "Roboto", sans-serif;
     font-size: 12px;
+    font-family: "Share Tech Mono", Arial, monospace;
 }
 
 body {
@@ -20,7 +20,6 @@ body {
 .header-index {
     align-items: center;
     display: flex;
-    font-family: "Share Tech Mono", Arial, monospace;
     height: 100vh;
     justify-content: center;
     position: relative;
@@ -155,10 +154,6 @@ body {
 }
 
 .section .titulo-atividades {
-    /* font-size: 2em;
-    margin: 1em 0 0 0;
-    padding: 1.5em 1.5em 0.5em 1.5em;
-    text-align: center; */
 
     font-size: 2em;
     margin: 0.5em 0 0 0;
@@ -231,7 +226,16 @@ body {
 .foto-pessoal {
     height: 14em;
     width: 14em;
-    border-radius: 50%;
+    clip-path: polygon(
+        50% 0%,
+        90% 20%,
+        100% 60%,
+        75% 100%,
+        25% 100%,
+        0% 60%,
+        10% 20%
+    );
+
     object-fit: cover;
     object-position: center;
     margin: auto;
@@ -239,7 +243,7 @@ body {
 
 .section-sobre {
     min-height: 100vh;
-    padding: 5em;
+    padding: 4em;
     color: antiquewhite;
     display: grid;
     grid-template-columns: 100%;
@@ -249,13 +253,19 @@ body {
     font-family: "Kite One", sans-serif;
 }
 
+.minha-descriçao {
+    text-indent: 1.5em;
+}
+
 .section-sobre a {
     color: antiquewhite;
     text-decoration-style: solid;
 }
 
 .section-sobre a:hover,
-.section-sobre a:active {
+.section-sobre a:active,
+.alura a:hover,
+.alura a:active {
     color: PALEVIOLETRED;
 }
 
@@ -275,14 +285,36 @@ body {
     display: none;
 }
 
+.alura {
+    color: pink;
+    text-align: center;
+    font-family: "Share Tech Mono", Arial, monospace;
+    padding: 1em;
+}
+
+.alura a {
+    color: pink;
+    transition: ease 1s;
+}
+
+.alura a:hover {
+    background-color: rgba(41, 63, 109, 0.712);
+}
+
+.icone {
+    color: rgba(255, 249, 236, 0.22);
+    position: fixed;
+    bottom: 3em;
+    right: 1em;
+    text-decoration: none;
+    font-size: 1.8em;
+    z-index: 999;
+}
+
 @media (max-width: 350px) {
     html {
         font-size: 12px;
     }
-
-    /* .section {
-        min-height: 100vh;
-    } */
 
     .section .titulo-projetos {
         padding: 2em 1.5em 0.3em 1.5em;
@@ -444,6 +476,11 @@ body {
     .linha {
         display: inherit;
     }
+
+    .icone {
+    bottom: 3em;
+    right: 3em;
+}
 }
 
 @media (min-height: 1000px) and (min-width: 1000px) {
@@ -480,4 +517,10 @@ body {
     .section-sobre {
         grid-template-columns: 16em 1em 25em;
     }
+
+    .icone {
+    bottom: 3em;
+    right: 1.5em;
+}
+
 }
