@@ -45,7 +45,7 @@ body {
     font-size: 1em;
     padding: 1em;
     text-decoration: none;
-    transition: all 500ms;
+    transition: all 800ms;
 }
 
 .contato a:hover {
@@ -53,9 +53,11 @@ body {
     transform: scale(1.5);
 }
 
-.menu a:hover::before {
+.menu a:hover::before,
+.menu a:hover {
     display: inline-block;
     color: thistle;
+    text-shadow: -2px 0px 14px rgba(150, 74, 207, 1);
 }
 
 .menu li {
