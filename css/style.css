@@ -17,7 +17,7 @@ body {
     position: relative;
 }
 
-header {
+.header-index {
     align-items: center;
     display: flex;
     font-family: "Share Tech Mono", Arial, monospace;
@@ -46,13 +46,17 @@ header {
     font-size: 1em;
     padding: 1em;
     text-decoration: none;
-    transition: transform 500ms;
+    transition: all 500ms;
 }
 
-.contato a:hover,
-.menu a:hover {
+.contato a:hover {
     text-shadow: -2px 0px 14px rgba(150, 74, 207, 1);
     transform: scale(1.5);
+}
+
+.menu a:hover::before {
+    display: inline-block;
+    color: thistle;
 }
 
 .menu li {
@@ -60,20 +64,20 @@ header {
 }
 
 .titulos {
-    transform: scale(.2) translateY(50vh);
+    transform: scale(0.2) translateY(50vh);
     opacity: 0;
     animation: 2s animacaoTitulo forwards;
 }
 
 @keyframes animacaoTitulo {
-  from {
-    transform: scale(0.2) translateY(50vh);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
+    from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
 }
 
 .site-title,
@@ -116,8 +120,12 @@ header {
 }
 
 .section .titulo-projetos {
-    margin: 0 0 0.5em 0;
+    /* margin: 0 0 0.5em 0;
     padding: 2em 1.5em 0.5em 1.5em;
+    text-align: center;
+    font-size: 2em; */
+
+    padding: 2.2em 1.5em 0.5em 1.5em;
     text-align: center;
     font-size: 2em;
 }
@@ -147,9 +155,14 @@ header {
 }
 
 .section .titulo-atividades {
-    font-size: 2em;
+    /* font-size: 2em;
     margin: 1em 0 0 0;
     padding: 1.5em 1.5em 0.5em 1.5em;
+    text-align: center; */
+
+    font-size: 2em;
+    margin: 0.5em 0 0 0;
+    padding: 1.5em 1.5em 0.3em 1.5em;
     text-align: center;
 }
 
@@ -207,6 +220,61 @@ header {
     text-decoration: none;
 }
 
+.header-sobre {
+    align-items: center;
+    display: flex;
+    font-family: "Share Tech Mono", Arial, monospace;
+    justify-content: center;
+    position: relative;
+}
+
+.foto-pessoal {
+    height: 14em;
+    width: 14em;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+}
+
+.section-sobre {
+    min-height: 100vh;
+    padding: 5em;
+    color: antiquewhite;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    font-family: "Kite One", sans-serif;
+}
+
+.section-sobre a {
+    color: antiquewhite;
+    text-decoration-style: solid;
+}
+
+.section-sobre a:hover,
+.section-sobre a:active {
+    color: PALEVIOLETRED;
+}
+
+.section-sobre p {
+    display: inline-block;
+    padding: 2em;
+    line-height: 1.6em;
+    text-align: justify;
+    font-size: 1.2em;
+    background-color: rgba(73, 100, 104, 0.199);
+}
+
+.linha {
+    border-right: palevioletred solid 0.12em;
+    height: 16em;
+    width: 0.1em;
+    display: none;
+}
+
 @media (max-width: 350px) {
     html {
         font-size: 12px;
@@ -215,7 +283,6 @@ header {
     /* .section {
         min-height: 100vh;
     } */
-
 
     .section .titulo-projetos {
         padding: 2em 1.5em 0.3em 1.5em;
@@ -228,11 +295,11 @@ header {
     }
 
     .simbolo-indicador-projetos {
-    padding: 1em 0;
-}
+        padding: 1em 0;
+    }
 
-    .atividades{
-        gap: .3em;
+    .atividades {
+        gap: 0.3em;
     }
 
     .section .titulo-atividades {
@@ -258,10 +325,6 @@ header {
         font-size: 1.2em;
     }
 
-    /* .section {
-        min-height: 100vh;
-    } */
-
     .portfolio {
         display: grid;
         gap: 1em;
@@ -277,8 +340,8 @@ header {
     }
 
     .contato {
-    padding: .6em 0 1.5em 0;
-}
+        padding: 1.5em 0 0.6em 0;
+    }
 }
 
 @media (min-width: 600px) {
@@ -336,13 +399,20 @@ header {
         font-size: 1.2em;
     }
 
-    /* .section {
-        min-height: 80vh;
-    } */
+    .menu a:hover::before {
+        display: inline-block;
+        color: thistle;
+    }
+
+    .menu a::before {
+        content: "☾";
+        display: none;
+        margin-right: 0.5em;
+    }
 
     .section .titulo-projetos {
         padding: 2em 1.5em 1em 1.5em;
-        margin: 0.5em 0 0.5em 0;
+        margin: 1.5em 0 0.5em 0;
     }
 
     .portfolio {
@@ -364,9 +434,16 @@ header {
     }
 
     .contato {
-    padding: 1em 0 1.5em 0;
-}
+        padding: 2em 0 1.5em 0;
+    }
 
+    .section-sobre {
+        grid-template-columns: 16em 1em 40em;
+    }
+
+    .linha {
+        display: inherit;
+    }
 }
 
 @media (min-height: 1000px) and (min-width: 1000px) {
@@ -378,7 +455,7 @@ header {
         font-size: 2em;
     }
 
-        .section .titulo-projetos {
+    .section .titulo-projetos {
         padding: 2em 1.5em 1.5em 1.5em;
         margin: 2.5em 0 0.5em 0;
     }
@@ -392,11 +469,15 @@ header {
         color: antiquewhite;
         display: flex;
         font-family: "Share Tech Mono", Arial, monospace;
-        min-height: 90vh;
+        padding-bottom: 2em;
         width: 100%;
     }
 
-     .contato {
-    padding: 0em 0 0.5em 0;
-}
+    .contato {
+        padding: 1.5em 0 1.5em 0;
+    }
+
+    .section-sobre {
+        grid-template-columns: 16em 1em 25em;
+    }
 }

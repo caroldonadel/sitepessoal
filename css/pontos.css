@@ -1,0 +1,46 @@
+.ponto-header {
+    position: relative;
+    width: 0.5em;
+    height: 0.5em;
+    opacity: 0.2;
+    text-shadow: -2px 0px 14px rgb(201, 198, 218);
+    bottom: -10em;
+    right: -5em;
+    animation:  pontos 3s infinite;
+}
+
+@keyframes pontos {
+    20% {
+        opacity: 0.2;
+        bottom: -5em;
+        right: -4em;
+    }
+    40% {
+        opacity: 0.4;
+        bottom: 4em;
+        right: -2em;
+    }
+    60% {
+        opacity: 0.6;
+        bottom: 8em;
+        right: 15em;
+    }
+
+   80% {
+        opacity: 0.8;
+        bottom: 6em;
+        right: 20em;
+    }
+
+    90%{
+        opacity: 0.8;
+        bottom: 4em;
+        right: 30em;
+    }
+    100% {
+        opacity: 1;
+        bottom: -7em;
+        right: 8em;
+    }
+}
+
