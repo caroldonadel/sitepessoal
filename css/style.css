@@ -65,32 +65,65 @@ body {
 }
 
 .titulos {
-    transform: scale(0.2) translateY(50vh);
-    opacity: 0;
-    animation: 2s animacaoTitulo forwards;
-}
-
-@keyframes animacaoTitulo {
-    from {
-        transform: scale(0.2) translateY(50vh);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1) translateY(0);
-        opacity: 1;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .site-title,
 .site-subtitle {
     color: antiquewhite;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .site-title {
     font-size: 3em;
     margin: 1em 0 0.3em 0;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
 }
+
+.site-subtitle {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    margin: 0 auto;
+}
+
+.typing-animation {
+    animation: blinkCursor 500ms steps(40) infinite normal,
+        typing 4s steps(40) 1s normal both;
+}
+
+.typing-animation-sub {
+    animation: typing-sub 3s steps(40) 1s normal both;
+} 
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 9em;
+    }
+}
+
+@keyframes typing-sub {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10em;
+    }
+}
+
+/* @keyframes blinkCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+} */
 
 .simbolo-indicador {
     bottom: 2em;
@@ -118,7 +151,7 @@ body {
     position: relative;
     /* min-height: 100vh; */
     width: 100%;
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 
 .section .titulo-projetos {
@@ -189,8 +222,6 @@ body {
     border-radius: 0.4em;
     background-color: rgba(239, 147, 162, 0.986);
 }
-
-
 
 .section .titulo-atividades {
     font-size: 2em;
