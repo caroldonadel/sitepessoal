@@ -10,6 +10,7 @@ html {
     background-size: cover;
     font-size: 12px;
     font-family: "Share Tech Mono", Arial, monospace;
+    scroll-behavior: smooth;
 }
 
 body {
