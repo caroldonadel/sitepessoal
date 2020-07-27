@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+:root {
+    --roxo: -2px 0px 14px rgba(150, 74, 207, 1);
+    --branco: 2px solid rgba(255, 255, 255, 0.75);
+}
+
 html {
     background-image: url("https://cdn.spacetelescope.org/archives/images/screen/heic1107a.jpg");
     background-position: center;
@@ -51,7 +56,7 @@ body {
 }
 
 .contato a:hover {
-    text-shadow: -2px 0px 14px rgba(150, 74, 207, 1);
+    text-shadow: var(--roxo);
     transform: scale(1.5);
 }
 
@@ -59,7 +64,7 @@ body {
 .menu a:hover {
     display: inline-block;
     color: thistle;
-    text-shadow: -2px 0px 14px rgba(150, 74, 207, 1);
+    text-shadow: var(--roxo);
 }
 
 .menu li {
@@ -83,11 +88,11 @@ body {
 .site-title {
     font-size: 3em;
     margin: 1em 0 0.3em 0;
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    border-right: var(--roxo);
 }
 
 .site-subtitle {
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    border-right: var(--roxo);
     margin: 0 auto;
 }
 
