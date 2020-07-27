@@ -97,7 +97,7 @@ body {
 }
 
 .typing-animation {
-    animation: blinkCursor 500ms steps(40) infinite normal,
+    animation:  500ms steps(40) infinite normal,
         typing 4s steps(40) 1s normal both;
 }
 
